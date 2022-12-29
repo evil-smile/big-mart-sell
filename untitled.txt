@@ -1,0 +1,76 @@
+
+1. Prévision des ventes pour les points de vente Big Mart
+Les data scientists de BigMart ont collecté des données sur les ventes de 2013 pour 1559 produits dans 10 magasins dans différentes villes. De plus, certains attributs de chaque produit et magasin ont été définis. L'objectif est de construire un modèle prédictif et de prédire les ventes de chaque produit dans un point de vente particulier.
+
+À l'aide de ce modèle, BigMart tentera de comprendre les propriétés des produits et des points de vente qui jouent un rôle clé dans l'augmentation des ventes.
+
+Veuillez noter que les données peuvent avoir des valeurs manquantes car certains magasins peuvent ne pas rapporter toutes les données en raison de problèmes techniques. Par conséquent, il sera nécessaire de les traiter en conséquence. 
+
+
+
+2. Dictionnaire de données
+Nous avons un ensemble de données de train (8523) et de test (5681), l'ensemble de données de train a à la fois des variables d'entrée et de sortie. Vous devez prévoir les ventes pour l'ensemble de données de test.
+
+
+
+Fichier de train :  CSV  contenant les informations sur le point de vente de l'article avec la valeur des ventes
+
+Variable	Description
+Item_Identifier	Identifiant unique du produit
+Poids de l'article	Poids du produit
+Item_Fat_Content	Si le produit est faible en gras ou non
+Item_Visibility	Le % de la surface d'affichage totale de tous les produits dans un magasin alloué au produit particulier
+Type d'élément	La catégorie à laquelle appartient le produit
+Article_MRP	Prix ​​de vente maximum (prix catalogue) du produit
+Outlet_Identifier	ID de magasin unique
+Outlet_Establishment_Year	L'année de création du magasin
+Outlet_Size	La taille du magasin en termes de surface au sol couverte
+Outlet_Location_Type	Le type de ville dans laquelle le magasin est situé
+Outlet_Type	Que le point de vente soit juste une épicerie ou une sorte de supermarché
+Item_Outlet_Sales	Ventes du produit dans le magasin particulier. C'est la variable de résultat à prédire.
+ 
+
+Fichier de test :  CSV contenant les combinaisons de points de vente d'articles pour lesquelles les ventes doivent être prévues
+
+Variable	Description
+Item_Identifier	Identifiant unique du produit
+Poids de l'article	Poids du produit
+Item_Fat_Content	Si le produit est faible en gras ou non
+Item_Visibility	Le % de la surface d'affichage totale de tous les produits dans un magasin alloué au produit particulier
+Type d'élément	La catégorie à laquelle appartient le produit
+Article_MRP	Prix ​​de vente maximum (prix catalogue) du produit
+Outlet_Identifier	ID de magasin unique
+Outlet_Establishment_Year	L'année de création du magasin
+Outlet_Size	La taille du magasin en termes de surface au sol couverte
+Outlet_Location_Type	Le type de ville dans laquelle le magasin est situé
+Outlet_Type	Que le point de vente soit juste une épicerie ou une sorte de supermarché
+
+
+Format du fichier de soumission
+
+Variable	Description
+Item_Identifier	Identifiant unique du produit
+Outlet_Identifier	ID de magasin unique
+Item_Outlet_Sales	Ventes du produit dans le magasin particulier. C'est la variable de résultat à prédire.
+
+
+Métrique d'évaluation
+Les performances de votre modèle seront évaluées sur la base de votre prédiction des ventes pour les données de test (test.csv), qui contiennent des points de données similaires à ceux du train, à l'exception des ventes à prédire. Votre soumission doit être dans le format indiqué dans l'exemple de soumission.
+
+De notre côté, nous avons les ventes réelles pour l'ensemble de données de test, par rapport auxquelles vos prédictions seront évaluées. Nous utiliserons la valeur de l' erreur quadratique moyenne pour évaluer votre réponse.
+
+
+
+Séparation publique et privée
+Le fichier de test est ensuite divisé en Public (25%) et Privé (75%)
+
+Vos réponses initiales seront vérifiées et notées sur les données publiques.
+Le classement final serait basé sur votre score privé qui sera publié une fois la compétition terminée.
+
+
+Lignes directrices pour la soumission finale
+Veuillez vous assurer que votre soumission finale comprend les éléments suivants :
+
+Fichier de solution contenant la valeur des ventes prévue dans l'ensemble de données de test (le format est indiqué dans l'exemple de soumission csv)
+Fichier de code pour reproduire la soumission, notez qu'il est obligatoire de soumettre votre code pour une soumission finale valide
+
